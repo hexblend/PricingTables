@@ -1,0 +1,926 @@
+/* Font Weights                         Color Palette
+-------------------           ------------------------------------
+200 - Extra Light              #FFFFFF - White
+300 - Light                    #ebebeb - Light Grey
+400 - Regular                  #414141 - Dark Grey
+700 - Bold                     #0f5170 - Main Blue
+900 - Black                    #000000 - Black
+*/
+
+/* G E N E R A L   S E T T I N G S */
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    text-align: center;
+    background: #fff;
+}
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+    outline: none;
+}
+p {
+    font-size: 14px;
+    line-height: 1.75;
+}
+p.large {
+    font-size: 16px;
+}
+.padding-0{
+    padding-right:0;
+    padding-left:0;
+}
+.dark-section{
+    min-height: 800px;
+    background: #ebebeb;
+}
+.light-section{
+    min-height: 800px;
+    background: #FFF;
+}
+.section-title{
+    font-weight: 700;
+    color: #414141;
+}
+.section-description{
+    font-weight: 200;
+    color: #414141;
+}
+
+
+/* Color Switcher */
+.themes {
+    position: fixed;
+    top: 10%;
+    left: 0;
+    z-index: 1000;
+}
+.themes .colors {
+    float: left;
+    padding: 10px;
+    background: #414141;
+    margin-left: -300px;
+    -moz-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+    z-index: 999;
+    border: 1px solid #000;
+    height: 90px;
+    
+}
+.themes .colors.active {
+    margin-left: -40px;
+}
+.themes .colors h3 {
+    font-size: 15px;
+    font-weight: 200;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    color: #c2af9a;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.themes-btn{
+    float: right;
+    border-radius: 0px;
+    background: #2e2e2e;
+    color: #777777;
+    border: 1px solid #000;
+}
+.themes-btn:hover{
+    color: #c2af9a;
+    background: #2e2e2e;
+    border: 1px solid #000;
+    -moz-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+}
+
+.themes ul li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    -moz-border-radius: 7.8px;
+    -webkit-border-radius: 7.8px;
+    border-radius: 7.8px;
+    margin-right: 2px;
+}
+.themes ul li:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+    opacity: 0.8
+}
+.themes ul.theme-colors li:nth-child(1){
+    background: #0f5170;
+    color: #0f5170;
+    margin-left: 20px;
+}
+.themes ul.theme-colors li:nth-child(2){
+    background: #DA4453;
+    color: #DA4453;
+}
+.themes ul.theme-colors li:nth-child(3){
+    background: #E9573F;
+    color: #E9673F;
+}
+.themes ul.theme-colors li:nth-child(4){
+    background: #00A25F;
+    color: #00A25F;
+}
+
+.themes ul.theme-colors li:nth-child(5){
+    background: #434A54;
+    color: #434A54;
+}
+
+
+/* I N T R O   S E C T I O N */
+.intro-section{
+    min-height: 800px;
+    background: url('../img/intro-bg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 30px;
+    -webkit-transition: all .5s ease-in;
+    -moz-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    transition: all .5s ease-in;
+}
+.small-section {
+    min-height: 300px;
+}
+.intro-section h1,
+.intro-section h4{
+    color: #FFF;
+}
+.intro-section .hide-btn,
+.intro-section .hide-btn:focus{
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 3px 20px;
+}
+
+/* General Panel Style */
+.panel-style-1{
+    border: 0;
+    border-radius: 10px;
+    background: rgba(255,255,255, 0.8);
+    margin-top: 40px;
+    margin-bottom: 80px;
+    -moz-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    -moz-box-shadow: 0 14px 28px rgba(0,0,0,0.5);
+    -o-box-shadow: 0 14px 28px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 14px 28px rgba(0,0,0,0.5);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.5);
+}
+/* Animations */
+.panel-style-1:hover{
+    background: rgba(255,255,255, 0.9);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    -o-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+/* Header Style */
+.panel-style-1 .panel-heading{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #0f5170;
+}
+.panel-style-1 .panel-heading .panel-title{
+    color: #FFF;
+    font-weight: 200;
+    font-size: 30px;
+    padding: 10px 0px;
+}
+
+/* Badge */
+.panel-style-1 .panel-body .badge{
+    background: #0f5170;
+    border-radius: 0;
+    margin-top: -10px;
+    position: absolute;
+    left: 15px;
+}
+.panel-style-1 .panel-body .badge p{
+    margin-bottom: 0px;
+    padding: 0 15px;
+    font-weight: 200;
+    font-size: 10px;
+}
+.panel-style-1 .panel-body .badge p i{
+    padding-right: 2px;
+}
+
+/* Price */
+.panel-style-1 .panel-body .price{
+    color: #0f5170;
+    font-weight: 900;
+    margin-top: 20px;
+    font-size: 60px;
+}
+.panel-style-1 .panel-body .price span{
+    font-size: 40px;
+}
+.panel-style-1 .panel-body .permonth{
+    color: #0f5170;
+    font-weight: 300;
+    margin: -10px 0px 25px 27%;
+}
+.panel-style-1 .panel-body .devider{
+    height: 1px;
+    width: 25%;
+    background: #1c6d93;
+    margin-bottom: 10px;
+    margin-left:auto; 
+    margin-right:auto;
+}
+.panel-style-1 .panel-body .description{
+    color: #0f5170;
+    font-weight: 200;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+/* Options List */
+.panel-style-1 .panel-body ul{
+    list-style: none;
+}
+.panel-style-1 .panel-body ul li{
+    margin-left: -55px;
+    margin-right: -15px;
+    font-weight: 400;
+    padding: 7px 0px;
+    color: #414141;
+}
+.panel-style-1 .panel-body ul li:nth-child(1),
+.panel-style-1 .panel-body ul li:nth-child(3),
+.panel-style-1 .panel-body ul li:nth-child(5),
+.panel-style-1 .panel-body ul li:nth-child(7){
+    background: #FFF;
+}
+.panel-style-1 .panel-body ul li i{
+    padding: 0 5px;
+    color: #0f5170;
+}
+.panel-style-1 .panel-body ul li span{
+    padding-right: 5px;
+    font-weight: 700;
+}
+
+/* 'BUY' Button Styling */
+.panel-style-1 .panel-body .buy-button{
+    background: #0f5170;
+    color: #fff;
+    font-weight: 200;
+    border: 0;
+    border-radius: 6px 6px 0px 0px;
+    margin-bottom: -15px;
+    margin-top: 15px;
+    padding: 7px 30px;
+    font-size: 12px;
+    -moz-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+.panel-style-1 .panel-body .buy-button:hover{
+    font-size: 15px;
+}
+
+
+/* S E C T I O N - 2 */
+.section-2{
+    padding-top: 30px;
+    margin-top: -10px;
+}
+.section-2 .hide-btn,
+.section-2 .hide-btn:focus{
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 3px 20px;
+}
+
+/* General Panel Style */
+.panel-style-2{
+    border: 1px solid #0f5170;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    -moz-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    -o-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.panel-style-2:hover{
+    -moz-box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    -o-box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    -webkit-box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/* Badge */
+.panel-style-2 .panel-body .badge{
+    background: #0f5170;
+    border-radius: 0;
+    margin-top: -15px;
+    position: absolute;
+    right: 20%;
+    left: 20%;
+}
+.panel-style-2 .panel-body .badge p{
+    margin-bottom: 0px;
+    padding: 0 15px;
+    font-weight: 200;
+    font-size: 10px;
+}
+.panel-style-2 .panel-body .badge p i{
+    padding-right: 2px;
+}
+
+.panel-style-2 .panel-title{
+    margin-top: 20px;
+    font-size: 28px;
+    color: #0f5170;
+    font-weight: 700;
+}
+
+/* Price */
+.panel-style-2 .price-div{
+    background: #0f5170;
+    border-radius: 100%;
+    width: 160px;
+    height: 160px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.panel-style-2 .panel-body .price{
+    color: #fff;
+    font-weight: 900;
+    margin-top: 20px;
+    font-size: 55px;
+    padding-top: 40px;
+}
+.panel-style-2 .panel-body .price span{
+    font-size: 25px;
+}
+.panel-style-2 .panel-body .permonth{
+    color: #fff;
+    font-weight: 300;
+    margin: -10px 0px 25px 27%;
+    font-size: 13px;
+}
+
+/* Options List */
+.panel-style-2 .panel-body ul{
+    list-style: none;
+    margin-top: 20px
+}
+.panel-style-2 .panel-body ul li{
+    margin-left: -55px;
+    margin-right: -15px;
+    font-weight: 400;
+    padding: 7px 0px;
+    color: #414141;
+}
+.panel-style-2 .panel-body ul li i{
+    padding: 0 5px;
+    color: #0f5170;
+}
+.panel-style-2 .panel-body ul li span{
+    padding-right: 5px;
+    font-weight: 700;
+}
+
+/* 'BUY' Button Styling */
+.panel-style-2 .panel-body .buy-button{
+    background: #0f5170;
+    color: #fff;
+    font-weight: 200;
+    border: 0;
+    border-radius: 6px 6px 0px 0px;
+    margin-bottom: -15px;
+    margin-top: 15px;
+    padding: 7px 30px;
+    font-size: 12px;
+    -moz-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+/* Animation */
+.panel-style-2 .panel-body .buy-button:hover{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+
+
+
+/******************** S E C T I O N - 3 ********************/
+.section-3{
+    padding-top: 30px;
+}
+.section-3 .hide-btn,
+.section-3 .hide-btn:focus{
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 3px 20px;
+    margin-bottom: 30px;
+}
+
+/* General Container */
+.section-3 .container-fluid {
+    margin: 0px 50px;
+}
+
+
+/******* G E N E R A L  C O N T A I N E R ******/
+
+/* Badge */
+.section-3 .general-container{
+    -moz-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+.section-3 .general-container:hover{
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+}
+.section-3 .general-container .badge{
+    background: rgba(0,0,0,0);
+    border-radius: 0;
+    margin-top: 0px;
+    position: absolute;
+    left: 0;
+}
+.section-3 .general-container .badge p{
+    font-size: 10px;
+}
+
+/* Title Section */
+.section-3 .general-container .col-md-2{
+    border-top-left-radius: 10px;
+    background: #0f5170;
+    color: #fff;
+    height: 130px;
+    border-bottom: 1px solid #fff;
+}
+.section-3 .general-container .col-md-2 .title{
+    font-size: 20px;
+    font-weight: 200;
+    margin-top: 25px;
+}
+
+/* Price */
+.section-3 .general-container .col-md-2 .price{
+    color: #fff;
+    font-weight: 900;
+    font-size: 35px;
+    margin-top: -5px;
+}
+.section-3 .general-container .col-md-2 .price span{
+    font-size: 25px;
+}
+.section-3 .general-container .col-md-2 .permonth{
+    color: #fff;
+    font-weight: 200;
+    margin: -10px 0px 25px 27%;
+    font-size: 10px;
+}
+
+/* List and Buy Button Section */
+.section-3 .general-container .col-md-3{
+    height: 130px;
+    border-top: 1px solid #0f5170;
+    border-bottom: 1px solid #0f5170;
+}
+
+.section-3 .general-container .col-md-1{
+    height: 130px;
+    background: #0f5170;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid #fff;
+}
+
+/* Options List */
+.section-3 .general-container .col-md-3 ul{
+    list-style: none;
+    margin-top: 20px
+}
+.section-3 .general-container .col-md-3 ul li{
+    margin-left: -55px;
+    margin-right: -15px;
+    font-weight: 400;
+    padding: 7px 0px;
+    color: #414141;
+}
+.section-3 .general-container .col-md-3 ul li:nth-child(1){
+    margin-top: -7px;
+}
+.section-3 .general-container .col-md-3 ul li i{
+    padding: 0 5px;
+    color: #0f5170;
+}
+.section-3 .general-container .col-md-3 ul li span{
+    padding-right: 5px;
+    font-weight: 700;
+}
+
+/* Buy Button */
+.section-3 .general-container a .col-md-1 i{
+    color: #fff;
+    margin-top: 45px;
+    font-size: 30px;
+    -moz-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+.section-3 .general-container .col-md-1:hover > i{
+    -moz-box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    -o-box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    -webkit-box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    margin-top: 40px;
+    border-radius: 20px;
+    
+}
+/************* A D V A N C E / U L T I M A T E ************/
+
+/* Title Section */
+.section-3 .advance-container .col-md-2{
+    border-top-left-radius: 0px;
+}
+/* List and Buy Button Section */
+.section-3 .advance-container .col-md-3{
+    border-top: 0;
+    border-bottom: 1px solid #0f5170;
+}
+.section-3 .advance-container .col-md-1{
+    border-top-right-radius: 0px;
+}
+
+/************* E N T E R P R I S E ************/
+
+/* Title Section */
+.section-3 .enterprise-container .col-md-2{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 10px;
+}
+/* List and Buy Button Section */
+.section-3 .enterprise-container .col-md-3{
+    border-top: 0;
+    border-bottom: 1px solid #0f5170;
+}
+.section-3 .enterprise-container .col-md-1{
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 0px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px){
+    /* Title Section */
+    .section-3 .row-fluid{
+        border-left: 1px solid #0f5170;
+        border-right: 1px solid #0f5170;
+    }
+    .section-3 .general-container .col-md-2{
+        border-radius: 0px;
+        background: #0f5170;
+        color: #fff;
+        height: 100px;
+        margin-bottom: 50px;
+    }
+    .section-3 .general-container .col-md-2 .title{
+        font-size: 20px;
+        font-weight: 200;
+        margin-top: 50px;
+        padding-top: 10px;
+    }
+    /* Price */
+    .section-3 .general-container .col-md-2 .price{
+        color: #fff;
+        font-weight: 900;
+        font-size: 35px;
+        margin-top: -5px;
+    }
+    .section-3 .general-container .col-md-2 .price span{
+        font-size: 25px;
+    }
+    .section-3 .general-container .col-md-2 .permonth{
+        color: #fff;
+        font-weight: 200;
+        margin: -10px 0px 25px 10%;
+        font-size: 10px;
+    }
+    /* List and Buy Button Section */
+    .section-3 .general-container .col-md-3{
+        height: auto;
+        border: 0px;
+        margin-top: -20px;
+    }
+    .section-3 .general-container .col-md-1{
+        height: auto;
+        background: #0f5170;
+        border-radius: 0;
+        border: 0px;
+        margin-top: 25px;
+    }
+    .section-3 .general-container a .col-md-1 i{
+        margin-top: 0px;
+        padding: 10px 10px;
+        font-size: 30px;
+    }
+    .section-3 .general-container .col-md-1:hover > i{
+        margin-top: -5px; 
+    }
+}
+
+/* S E C T I O N - 4 */
+.section-4{
+    padding-top: 30px;
+}
+.section-4 .hide-btn,
+.section-4 .hide-btn:focus{
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 3px 20px;
+}
+
+/* General Panel Styling */
+.panel-style-4{
+    border: 0px;
+    border-radius: 0px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    -moz-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+.panel-style-4:hover{
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    -o-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    margin-right: -10px;
+    margin-top: 30px;
+}
+
+/* Panel Heading */
+.panel-style-4 .panel-heading{
+    background: #0f5170;
+    height: 170px;
+    border-radius: 0;
+}
+.panel-style-4 .panel-heading h3{
+    color: #FFF;
+    font-size: 28px;
+    padding-top: 10px;
+}
+
+/* Symbol */
+.panel-style-4 .symbol-div{
+    background: #fff;
+    border-radius: 100%;
+    width: 160px;
+    height: 160px;
+    margin-top: -100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.panel-style-4 .symbol-div i{
+    color: #0f5170;
+    padding-top: 100%;
+    transform: translateY(-51%);
+    font-size: 85px;
+}
+
+/* Price */
+.panel-style-4 .panel-body .price{
+    color: #0f5170;
+    font-weight: 900;
+    font-size: 55px;
+    margin-top: -10px;
+}
+.panel-style-4 .panel-body .price span{
+    font-size: 25px;
+}
+.panel-style-4 .panel-body .permonth{
+    color: #0f5170;
+    font-weight: 300;
+    margin: -10px 0px 25px 27%;
+    font-size: 13px;
+}
+
+/* Options List */
+.panel-style-4 .panel-body ul{
+    list-style: none;
+    margin-top: 20px
+}
+.panel-style-4 .panel-body ul li{
+    margin-left: -55px;
+    margin-right: -15px;
+    font-weight: 400;
+    padding: 7px 0px;
+    color: #414141;
+}
+.panel-style-4 .panel-body ul li i{
+    padding: 0 5px;
+    color: #0f5170;
+}
+.panel-style-4 .panel-body ul li span{
+    padding-right: 5px;
+    font-weight: 700;
+}
+
+/* 'BUY' Button Styling */
+.panel-style-4 .panel-body .buy-button{
+    background: #0f5170;
+    color: #fff;
+    font-weight: 200;
+    border: 0;
+    border-radius: 0px;
+    margin-top: 15px;
+    padding: 7px 30px;
+    font-size: 12px;
+    -moz-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    box-shadow: 0 0 1px transparent;
+}
+.panel-style-4 .panel-body .buy-button:hover{
+    padding: 10px 45px;
+    margin-top: 9px;
+}
+
+
+
+
+/* S E C T I O N - 5 */
+.section-5{
+    padding-top: 30px;
+}
+
+.section-5 .hide-btn,
+.section-5 .hide-btn:focus{
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 3px 20px;
+}
+
+/* General Panel Style */
+.panel-style-5{
+    border: 1px solid #0f5170;
+    border-radius: 0px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    -moz-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+.panel-style-5:hover .symbol-div{
+    width: 180px;
+    height: 180px;
+}
+.panel-style-5:hover{
+    -moz-box-shadow:0 80px 50px -60px rgba(0,0,0,0.5);
+    -o-box-shadow:0 80px 50px -60px rgba(0,0,0,0.5);
+    -webkit-box-shadow:0 80px 50px -60px rgba(0,0,0,0.5);
+    box-shadow:0 80px 50px -60px rgba(0,0,0,0.5);
+}
+
+/* Badge */
+.panel-style-5 .panel-body .badge{
+    background: #0f5170;
+    border-radius: 0;
+    margin-top: -15px;
+    position: absolute;
+    right: 20%;
+    left: 20%;
+}
+.panel-style-5 .panel-body .badge p{
+    margin-bottom: 0px;
+    padding: 0 15px;
+    font-weight: 200;
+    font-size: 10px;
+}
+.panel-style-5 .panel-body .badge p i{
+    padding-right: 2px;
+}
+
+.panel-style-5 .panel-title{
+    margin-top: 20px;
+    font-size: 28px;
+    color: #0f5170;
+    font-weight: 700;
+}
+
+/* Symbol */
+.panel-style-5 .symbol-div{
+    background: #0f5170;
+    border-radius: 100%;
+    width: 160px;
+    height: 160px;
+    -moz-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.panel-style-5 .symbol-div i{
+    color: #fff;
+    padding-top: 100%;
+    transform: translateY(-51%);
+    font-size: 85px;
+}
+/* Price */
+.panel-style-5 .panel-body .price{
+    color: #0f5170;
+    font-weight: 900;
+    margin-top: 20px;
+    font-size: 55px;
+}
+.panel-style-5 .panel-body .price span{
+    font-size: 25px;
+}
+.panel-style-5 .panel-body .permonth{
+    color: #0f5170;
+    font-weight: 300;
+    margin: -10px 0px 25px 27%;
+    font-size: 13px;
+}
+
+/* Options List */
+.panel-style-5 .panel-body ul{
+    list-style: none;
+    margin-top: 20px
+}
+.panel-style-5 .panel-body ul li{
+    margin-left: -55px;
+    margin-right: -15px;
+    font-weight: 400;
+    padding: 7px 0px;
+    color: #414141;
+}
+.panel-style-5 .panel-body ul li i{
+    padding: 0 5px;
+    color: #0f5170;
+}
+.panel-style-5 .panel-body ul li span{
+    padding-right: 5px;
+    font-weight: 700;
+}
+
+/* 'BUY' Button Styling */
+.panel-style-5 .panel-body .buy-button{
+    background: #0f5170;
+    color: #fff;
+    font-weight: 200;
+    border: 0;
+    border-radius: 0px;
+    margin-bottom: -15px;
+    margin-top: 15px;
+    padding: 7px 30px;
+    font-size: 12px;
+    -moz-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+.panel-style-5 .panel-body .buy-button:hover{
+    padding: 7px 44%;
+}
