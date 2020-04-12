@@ -1,4 +1,4 @@
-# Fiver - Pricing Tables Pack
+# Pricing Tables Pack
 Even though the title is kind of self explanatory, this is a pricing tables pack which contains 5 different tables styles. Each style can also be customised from a color switcher and the user can choose between 5 different colors. Pretty cool, huh?
 
 ## Style 1
